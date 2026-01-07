@@ -1,0 +1,464 @@
+/* ---------------------- GLOBAL QUERYS ---------------------- */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    line-height: 1.4;
+  }
+
+  .page_title {
+    font-size: 1.8rem !important;
+    margin: 0px 10px;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 0px var(--deep-brown);
+  }
+
+  .press-start {
+    font-size: 10px !important;
+  }
+
+  body::before {
+    filter: blur(2px) grayscale(20%) opacity(0.3);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
+  #root {
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 380px) {
+  .page_title {
+    font-size: 1rem !important;
+  }
+
+  .swal2-popup {
+    font-size: 0.6rem !important;
+    width: 95% !important;
+  }
+}
+
+/* ---------------- GLOBAL QUERYS END ---------------------- */
+
+/* ------------------------ NAVBAR -------------------------  */
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--pokedex-red);
+    border-bottom: 1px solid var(--deep-brown);
+    z-index: 1000;
+    overflow: hidden;
+    transition: height 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .navbar.open {
+    height: 300px;
+  }
+
+  .navbar_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+
+  .menu-links {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px);
+  }
+
+  .navbar.open .menu-links {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+
+  .navbar_nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .navbar_nav-list a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.75rem;
+    transition: all 0.2s ease;
+    margin-top: -25px;
+    margin-left: -10px;
+    font-family: "Press Start 2P", cursive;
+    text-shadow: 2px 2px 0px var(--deep-brown);
+  }
+
+  .navbar_nav-list a:hover {
+    background-color: #2c3e50;
+    color: #00f2ff;
+    border-radius: 20px;
+    padding-left: 30px;
+    border-left: 1px solid #00f2ff;
+    box-shadow: inset 10px 0px 15px -10px rgba(0, 242, 255, 0.3);
+    transform: scale(1.02);
+  }
+
+  .navbar_nav-list a.active-link {
+    background-color: #2c3e50;
+    border-radius: 20px;
+    border-left: 1px solid #ffffff;
+    color: #ffffff;
+    padding-left: 25px;
+    pointer-events: none;
+  }
+
+  .navbar_nav-list a:hover .icon {
+    filter: drop-shadow(0px 0px 8px #00f2ff);
+    transform: rotate(5deg);
+  }
+
+  .navbar_nav-list .icon {
+    width: 32px;
+    height: 32px;
+    margin-left: -10px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
+  }
+
+  .burger-btn {
+    background: none;
+    border: none;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    padding: 0;
+  }
+
+  .img_pokeball {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.6s ease;
+  }
+
+  .navbar.open .img_pokeball {
+    transform: rotate(180deg);
+  }
+
+  .burger-container {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 35px;
+    margin-left: -30px;
+    flex-shrink: 0;
+    transition: border-bottom 0.1s ease-in-out;
+  }
+
+  .navbar.open .burger-container {
+    border-bottom: 1px solid var(--deep-brown);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* ------------------ NAVBAR END ----------------------- */
+
+/* ---------------------- LAYOUT ---------------------- */
+
+@media (max-width: 768px) {
+  .panels-container {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    gap: 15px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-display {
+    order: 1;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .sidebar-left {
+    order: 2;
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .sidebar-right {
+    order: 3;
+    width: 100%;
+    min-height: auto;
+    display: none;
+  }
+
+  .grid-1-3 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 15px;
+    padding: 10px;
+    max-width: 100%;
+    margin: 1rem 0;
+    border-width: 3px;
+  }
+
+  .pokemon-img,
+  .principal-box,
+  .secundary-box,
+  .third-box {
+    grid-area: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .pokemon-img img {
+    max-width: 250px;
+  }
+
+  .grid-1-2 {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .pokedex-page-wrapper {
+    padding-top: 80px;
+  }
+
+  .panel-header {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .sidebar-left .panel-header,
+  .sidebar-right .panel-header {
+    margin: -20px -20px 10px -20px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .menu-links {
+    gap: 10px;
+  }
+}
+
+/* ------------------- LAYOUT END --------------------- */
+
+/* ------------------ COMPONENTS --------------------- */
+
+@media (max-width: 768px) {
+  /* --- 1. FORMULARIOS DE LOGIN Y CRUD --- */
+
+  .pokemon_form,
+  .crud-form-container {
+    width: 95%;
+    padding: 15px;
+    margin: 20px auto;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .pokemon_form input[type="text"],
+  .crud-form-container input[type="text"],
+  .crud-form-container select {
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .crud-form-container input[type="submit"],
+  .crud-form-container input[type="reset"] {
+    width: 100%;
+    margin: 5px 0;
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+
+  .preview-container {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+  }
+
+  .crud-table-container {
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--deep-brown);
+  }
+
+  .pokedex-table {
+    min-width: 600px;
+  }
+
+  .table-header-tools {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .table-search-input {
+    width: 100%;
+    font-size: 0.7rem;
+    padding: 10px 10px 10px 35px;
+  }
+
+  .btn-table-edit,
+  .btn-table-delete {
+    width: 38px;
+    height: 38px;
+  }
+
+  .btn-table-edit img,
+  .btn-table-delete img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pokedex-pagination {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .pokedex-pagination button {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+
+  footer {
+    width: 100vw;
+    padding: 1rem 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  footer h5 {
+    font-size: 0.55rem;
+  }
+}
+
+/* ---------------- COMPONENTS END ------------------- */
+
+/* ---------------- PASWORD_STYLES ------------------- */
+
+@media (max-width: 480px) {
+  .form_user {
+    padding: 1.5rem;
+    width: 90%; 
+    max-width: none; 
+  }
+
+ 
+  .btn-exit-login {
+    top: 15px;
+    left: 15px;
+    padding: 8px; 
+  }
+
+  .btn-exit-login .icon {
+    width: 20px;
+  }
+
+  .page--title {
+    margin-bottom: 1.5rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  
+  .heroui-style-input {
+    font-size: 16px !important;
+    transform: scale(0.8);
+    transform-origin: left center;
+    margin-bottom: 10px !important;
+  }
+
+
+  .btn {
+    padding: 12px;
+    font-size: 0.8rem !important;
+  }
+}
+
+
+@media (max-height: 600px) {
+  .form_content {
+    align-items: flex-start;
+    padding-top: 20px;
+    overflow-y: auto;
+  }
+
+  .form_user {
+    margin-bottom: 20px;
+  }
+}
+
+/* -------------- PASWORD_STYLES END ---------------- */
+
+/* --------------------- HOME ------------------- */
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .home-title {
+    font-size: 1.8rem;
+  }
+  
+  .floating-pokeball {
+    width: 80px;
+    top: 5%;
+    right: 5%;
+    opacity: 0.5;
+  }
+}
+
+/* --------------- HOME END -------------------- */

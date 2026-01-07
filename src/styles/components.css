@@ -1,0 +1,477 @@
+/* Imagen */
+.pokemon-img img {
+  max-width: 21.1rem;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+/* ----------------- FORMULARIO ------------------ */
+
+/* pokemon_form */
+.pokemon_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #a7b9d3;
+  border-radius: 12px;
+  margin-top: 70px;
+  padding: 1rem;
+  gap: 20px;
+  border: 1px solid var(--deep-brown);
+}
+
+.pokemon_form input[type="text"] {
+  background-color: var(--lcd-blue);
+  color: var(--dark-maroon);
+  border: 1px solid var(--deep-brown);
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: inset 4px 4px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  width: 100%;
+  max-width: 500px;
+}
+
+.pokemon_form input[type="text"]:focus {
+  border-color: var(--pokedex-red);
+  background-color: #b9cce6;
+}
+
+.btn-submit {
+  background-color: var(--pokedex-red);
+  color: white;
+  border: 1px solid var(--deep-brown);
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  padding: 10px 25px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--dark-maroon);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-submit:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--dark-maroon);
+}
+
+/* ------------------ CRUD FORM ------------------- */
+
+.crud-form-container {
+  background-color: var(--lcd-blue); 
+  border: 1px solid var(--deep-brown);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.crud-form-container h3 {
+  color: var(--deep-brown);
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.crud-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.crud-form-container input[type="text"],
+.crud-form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--deep-brown);
+  border-radius: 6px;
+  background-color: #fff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
+  color: #333;
+}
+
+.crud-form-container input[type="text"]:focus,
+.crud-form-container input[type="file"]:focus,
+.crud-form-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.preview-container {
+  width: 150px;
+  height: 150px;
+  margin: 15px auto;
+  border: 1px inset var(--pokedex-red);
+  background: #eee;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  overflow: hidden;
+  padding: 10px;       
+  box-sizing: border-box;  
+}
+
+.no-image-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.55rem;
+  color: #666;
+  text-align: center;
+  margin: 0;               
+  display: block;         
+  line-height: 1.5;       
+}
+
+.preview-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.input_crud[type="file"] {
+  display: none;
+}
+
+.crud-form-container input[type="submit"],
+.crud-form-container input[type="reset"] {
+  width: 48%;
+  padding: 12px;
+  margin: 10px 1%;
+  border: none;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: white;
+}
+
+.crud-form-container input[type="submit"] {
+  background-color: #4caf50;
+}
+
+.crud-form-container input[type="reset"] {
+  background-color: #f44336;
+}
+
+.crud-form-container input[type="submit"]:hover,
+.crud-form-container input[type="reset"]:hover {
+  filter: brightness(1.1);
+}
+
+.custom-file-label {
+  display: block;
+  background-color: var(--pokedex-red);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem;
+  margin: 10px 0;
+  border: 1px solid var(--deep-brown);
+  transition: transform 0.1s;
+}
+
+.custom-file-label:active {
+  transform: translateY(3px);
+}
+
+/* ------------- TABLAS ------------- */
+.crud-form-container,
+.crud-table-container {
+  background-color: var(--lcd-blue);
+  border: 1px solid var(--deep-brown);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.crud-table-container::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.05) 0px,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+.crud-form-container h3,
+.crud-table-container .panel-header,
+.crud-table-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--deep-brown);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  margin-top: 0; 
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.pokedex-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.55rem;
+  color: #00ff41;
+}
+
+.pokedex-table td:first-child {
+  color: #fff;
+  text-shadow: 0 0 5px #00ff41;
+  font-weight: bold;
+}
+
+.type-badge {
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid #00ff41;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 0.45rem;
+}
+
+.pokedex-table thead {
+  background-color: var(--deep-brown);
+  position: sticky;
+  top: 0;
+}
+
+.pokedex-table th {
+  padding: 15px;
+  color: white;
+  text-align: left;
+  border-bottom: 2px solid #00ff41;
+}
+
+.pokedex-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.table-row-retro.is-editing {
+  background-color: rgba(255, 255, 0, 0.15) !important;
+  border-left: 5px solid #ffc107;
+}
+
+.table-row-retro:hover {
+  background-color: rgba(0, 255, 65, 0.1);
+}
+
+.table-responsive::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: var(--deep-brown);
+  border: 0 solid #00ff41;
+}
+
+.table-header-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--deep-brown);
+}
+
+.table-search-input {
+  background: #1a1a1a;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  font-family: 'Press Start 2P';
+  font-size: 0.6rem;
+  padding: 8px;
+  width: 250px;
+  outline: none;
+}
+
+.btn-table-edit, 
+.btn-table-delete {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px; 
+  height: 32px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.btn-table-edit img, 
+.btn-table-delete img {
+  width: 18px; 
+  height: 18px;
+  object-fit: contain; 
+  image-rendering: pixelated;
+}
+
+.btn-table-edit:hover img, 
+.btn-table-delete:hover img {
+  filter: grayscale(1) brightness(1.5);
+  transition: filter 0.2s ease;
+}
+
+.actions-cell {
+  white-space: nowrap;
+  text-align: center;
+  min-width: 80px;
+}
+
+.pokedex-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background: var(--deep-brown);
+  gap: 8px;
+}
+
+.pokedex-pagination button {
+  background: #333;
+  color: #aaa;
+  border: 1px solid #555;
+  padding: 5px 8px;
+  font-family: "Press Start 2P";
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+.pokedex-pagination button.active {
+  color: #00ff41;
+  border-color: #00ff41;
+  box-shadow: 0 0 5px #00ff41;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.table-search-input {
+  padding-left: 35px;
+  background: #1a1a1a;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  height: 35px;
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-submit-crud,
+.btn-reset-crud {
+  flex: 1;
+  padding: 15px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: white;
+  border: 3px solid var(--deep-brown);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+}
+
+.btn-submit-crud {
+  background-color: #4caf50;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.btn-submit-crud:hover {
+  background-color: #43a047;
+  filter: brightness(1.1);
+}
+
+.btn-reset-crud {
+  background-color: #f44336; 
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.btn-reset-crud:hover {
+  background-color: #e53935;
+  filter: brightness(1.1);
+}
+
+.btn-submit-crud:active,
+.btn-reset-crud:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2); 
+}
+
+/* FOOTER */
+footer {
+  background-color: #3b2417;
+  border-top: 1px solid var(--pokedex-red);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; 
+}
+
+footer h5 {
+  color: #ffde00;
+  font-size: 0.6rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.footer-icons p {
+  color: #a0dbda;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+
+.footer-icons p {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}

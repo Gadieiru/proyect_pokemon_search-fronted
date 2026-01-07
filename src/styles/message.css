@@ -1,0 +1,45 @@
+.pokemon-message-container {
+  padding: 4px;
+  margin-bottom: 1.5rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  position: relative;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-message-container.error {
+  background-color: #3b2417; 
+}
+
+.pokemon-message-container.success {
+  background-color: #1e4d2b; 
+}
+
+.pokemon-message-content {
+  background-color: #e0e8e8; 
+  padding: 1rem;
+  border: 4px solid #fff; 
+  color: #3b2417;
+}
+
+.error .pokemon-message-content {
+  border-color: #ff1f1f; 
+}
+
+.success .pokemon-message-content {
+  border-color: #46ef26; 
+}
+
+.pokemon-message-content p::after {
+  content: "▼";
+  display: inline-block;
+  margin-left: 10px;
+  animation: blink 0.8s infinite;
+  color: #ff1f1f;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}

@@ -1,0 +1,82 @@
+:root {
+  --pokedex-red: #cc322a; /* Chasis: Navbar y elementos de acción */
+  --vintage-cream: #e6d596; /* Fondo: El "aire" de la página */
+  --dark-maroon: #642c34; /* Texto: Títulos y contenido principal */
+  --clay-pink: #b45c64; /* Acento: Estados hover y alertas */
+  --lcd-blue: #a7b9d3; /* Pantalla: Fondos de cards, inputs y detalles */
+  --deep-brown: #4c3434; /* Bordes: El "contorno" de los botones y secciones */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+.swal2-container {
+  z-index: 10000 !important; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--dark-maroon);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background:url("../assets/pokedex-background.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/pokedex-background.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(4px) grayscale(30%) opacity(0.2);
+  z-index: -1;
+}
+
+.press-start {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 12px;
+}
+
+.page_title {
+  font-family: "Press Start 2P", system-ui;
+  text-align: center;
+  margin: 10px;
+  color: var(--pokedex-red);
+  text-shadow: 2px 2px 0px var(--deep-brown);
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--dark-maroon);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
